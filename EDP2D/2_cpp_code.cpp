@@ -46,13 +46,13 @@ int main(){
     float v = 1E-4; // en m^2/s
     float dx = 0.01; // Espaciado de la grilla
     float dt = 0.1 * dx * dx / v; // Paso de tiempo en segundos
-    cout<<"dt = "<<dt<<endl;
+    //cout<<"dt = "<<dt<<endl;
     int N = L/dx; // Número de puntos en la grilla
-    cout<<"N = "<<N<<endl;
+    //cout<<"N = "<<N<<endl;
     float t_0 = 0.0; // Tiempo inicial
     float t_f = 2500.0; // Tiempo final
     int steps = (t_f - t_0) / dt;
-    cout<<"steps = "<<steps<<endl;
+    //cout<<"steps = "<<steps<<endl;
 
     // Temperaturas
     float T_0 = 50.0; // Temperatura inicial de la placa
@@ -71,7 +71,7 @@ int main(){
         }
     }
 
-    string tipo_frontera = "periodica"; // "fija", "periodica", "abierta"
+    string tipo_frontera = "fija"; // "fija", "periodica", "abierta"
     
     for (int c = 0; c <= steps; c++) {
         float t = c * dt;
